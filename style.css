@@ -1,0 +1,15 @@
+.grid-container{
+ display: grid;
+ background-color: beige;
+ grid-template-areas: "header header header header header"
+ "menu main main aside aside"
+ "menu footer footer footer footer";
+gap: 10px ;
+}
+.grid-container *{
+    background-color: brown;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    color: wheat;
+}

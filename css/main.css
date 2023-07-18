@@ -1,0 +1,280 @@
+main .section-list .card-container .div-container-text--card p, main .section-theBright p {
+  font-size: 1.5rem;
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: hsl(236, 13%, 42%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+}
+
+header {
+  max-width: 375px;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+  margin: auto;
+}
+header .letter-logo {
+  background-image: url("../assets/images/logo.svg");
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+header nav .menu-ico {
+  background-image: url("../assets/images/icon-menu.svg");
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.nav-list {
+  position: absolute;
+  height: 100vh;
+  width: 260px;
+  background-color: hsl(36, 100%, 99%);
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  transition: all 500ms ease;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.nav-list .ico-close {
+  background-image: url("../assets/images/icon-menu-close.svg");
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  margin: 10px;
+  align-self: flex-end;
+}
+.nav-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nav-list ul li {
+  list-style: none;
+  width: 100%;
+  display: block;
+}
+.nav-list ul li a {
+  display: block;
+  text-decoration: none;
+  color: hsl(240, 100%, 5%);
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+}
+.nav-list ul li a:hover {
+  background-color: hsl(240, 100%, 5%);
+  border-left: 4px solid hsl(5, 85%, 63%);
+  color: white;
+  box-shadow: 1px 2px 20px 0px hsl(240, 100%, 5%);
+  transition: 0.1s;
+}
+
+main {
+  max-width: 375px;
+  padding: 0px 30px;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 50px;
+  margin: auto;
+}
+main .section-theBright .div--img-primary img {
+  width: 100%;
+}
+main .section-theBright h1 {
+  font-size: 3.7rem;
+  font-weight: 800;
+  color: hsl(240, 100%, 5%);
+}
+main .section-theBright button {
+  letter-spacing: 5px;
+  margin-top: 15px;
+  padding: 10px;
+  color: white;
+  background-color: hsl(5, 85%, 63%);
+  border: 1px solid hsl(5, 85%, 63%);
+}
+main .section-theBright button:hover {
+  background-color: hsl(240, 100%, 5%);
+  border: 1px solid hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+main .section-new {
+  width: 100%;
+  padding: 20px;
+  background-color: hsl(240, 100%, 5%);
+}
+main .section-new h2 {
+  color: hsl(35, 77%, 62%);
+}
+main .section-new div {
+  border-bottom: 1px solid gray;
+  padding: 30px 0px;
+}
+main .section-new div h3 {
+  font-weight: 700;
+  color: hsl(36, 100%, 99%);
+}
+main .section-new div p {
+  color: hsl(236, 13%, 42%);
+  margin-top: 15px;
+  font-weight: 400;
+}
+main .section-new div:nth-child(4) {
+  border-bottom: none;
+}
+main .section-list {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  row-gap: 30px;
+  margin-bottom: 20px;
+}
+main .section-list .card-container {
+  display: flex;
+}
+main .section-list .card-container img {
+  width: 80px;
+  height: 100px;
+}
+main .section-list .card-container .div-container-text--card {
+  margin-left: 15px;
+}
+main .section-list .card-container .div-container-text--card span {
+  font-size: 3rem;
+  color: hsl(233, 8%, 79%);
+  font-weight: 700;
+}
+.capa {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.show {
+  transform: translateX(0%);
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
+.hide {
+  transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (min-width: 1440px) {
+  header {
+    max-width: none;
+    width: 1250px;
+    margin: auto;
+    padding: 30px 0;
+  }
+  header nav .menu-ico {
+    display: none;
+  }
+  header nav .nav-list {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    width: auto;
+    transform: none;
+    transition: none;
+  }
+  header nav .nav-list ul {
+    flex-direction: row;
+    gap: 5px;
+  }
+  header nav .nav-list ul li a {
+    border: 2px solid hsl(36, 100%, 99%);
+    border-left: none;
+    background-color: hsl(36, 100%, 99%);
+  }
+  header nav .nav-list ul li a:hover {
+    border-left: none;
+    color: hsl(240, 100%, 5%);
+    background: none;
+    border-bottom: 2px solid hsl(5, 85%, 63%);
+    box-shadow: none;
+  }
+  header nav .nav-list .ico-close {
+    display: none;
+  }
+  main {
+    max-width: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    grid-template-columns: 400px 400px 350px;
+    grid-template-rows: auto auto;
+    gap: 60px 50px;
+    margin: auto;
+  }
+  main .section-theBright {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  main .section-theBright .info-primary {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  main .section-theBright .info-primary h1 {
+    width: 90%;
+    font-size: 6rem;
+    line-height: 50px;
+  }
+  main .section-list {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  main .section-list .card-container {
+    width: 300px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=main.css.map */
